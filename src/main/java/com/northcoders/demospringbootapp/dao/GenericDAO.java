@@ -48,6 +48,7 @@ public class GenericDAO {
             responseObject = mapper.readValue(json, responseClass);
         } catch (JsonProcessingException e) {
             System.out.println("Error deserialising JSON to " + responseClass.getClasses().toString());
+            e.printStackTrace();
         }
 
         return responseObject;
